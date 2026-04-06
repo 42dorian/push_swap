@@ -1,11 +1,12 @@
 NAME = push_swap
 
 SOURCE = src/push_swap.c \
-			src/moves.c
+			src/moves.c \
+			src/helpers.c
 
 HEADER = push_swap.h
 
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g
 
 
 OBJECTS = $(SOURCE:.c=.o)
