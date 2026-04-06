@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 14:10:34 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/06 13:43:57 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/06 15:40:50 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,14 @@ int	check_input(int ac, char const **args)
 {
 	int i;
 
-	i = 1;
+	i = 0;
+    args++;
 	if (ac < 2)
-	{
-		ft_printf("Error\nAt least one argument required!\n");
 		return (0);
-	}
 	while (args[i])
 	{
 		if (!check_digits(args[i]))
-		{
-			ft_printf("Error\nInvalid arguments\n");
-			ft_printf("Must only contain digits and 1 + or - before digit\n");
-			return (0);
-		}
+			return (ft_printf("Error\n"), 0);
 		i++;
 	}
 	return (1);

@@ -2,7 +2,8 @@ NAME = push_swap
 
 SOURCE = src/push_swap.c \
 			src/moves.c \
-			src/helpers.c
+			src/helpers.c \
+			src/store_and_sort.c
 
 HEADER = push_swap.h
 
