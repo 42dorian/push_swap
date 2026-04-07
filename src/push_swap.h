@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:54 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/07 16:46:47 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/07 17:36:37 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 # include "../include/ft_printf/ft_printf.h"
 # include "../include/libft/libft.h"
 # include <limits.h>
-# define false 0
-# define true 1
-# define fail 1
-# define success 0
+# define FALSE 0
+# define TRUE 1
+# define FAIL 1
+# define SUCCESS 0
 
 typedef struct s_stack
 {
@@ -35,5 +35,5 @@ void				sort_array(int ac, int *arr);
 long				ft_atol(const char *nptr);
 void				store_stack(t_stack *stack, int ac, char const **args);
 void				sort_stack_index(t_stack *stack, int *arr, int ac);
-
+int					stack_size(t_stack *stack);
 #endif

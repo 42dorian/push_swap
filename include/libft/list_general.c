@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 13:18:12 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/02/21 15:36:30 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/07 17:34:49 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_list	*ft_lstnew(void *content)
 	list->next = NULL;
 	return (list);
 }
+
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)

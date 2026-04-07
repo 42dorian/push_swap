@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:31:43 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/07 16:43:34 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/07 17:37:09 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void	store_stack(t_stack *stack, int ac, char const **args)
 			stack->next = ft_calloc(1, sizeof(t_stack));
 			if (!stack->next)
 				return (free(arr));
+			stack->next->prev = stack;
 			stack = stack->next;
 		}
 		i++;

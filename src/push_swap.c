@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:50 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/07 16:43:36 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/07 17:33:33 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ void	print_stack(t_stack *stack)
 	while (stack)
 	{
 		ft_printf("Int: %i, Index: %i\n", stack->value, stack->index);
+		if (!(stack->prev))
+			ft_printf("Prev: (empty)\n");
+		else
+			ft_printf("Prev: %i\n", stack->prev->value);
 		stack = stack->next;
 	}
 }
@@ -32,5 +36,6 @@ int	main(int ac, char const *av[])
 		return (fail);
 	store_stack(&stack_a, ac - 1, av + 1);
 	print_stack(&stack_a);
+	ft_printf("LIST size: %i\n", stack_size(&stack_a));
 	return (success);
 }
