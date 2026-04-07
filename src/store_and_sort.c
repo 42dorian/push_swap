@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:31:43 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/06 16:17:41 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/07 12:52:02 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ int *store_array(int ac, char const **args)
     int i;
 
     i = 0;
-    args++;
-    arr = malloc(sizeof(int) * ac - 1);
+    arr = malloc(sizeof(int) * ac);
     if (!arr)
         return (0);
     while (args[i])
@@ -28,7 +27,8 @@ int *store_array(int ac, char const **args)
         i++;
     }
     i = 0;
-    while (i < ac - 1)
+    // sort_array(ac, arr);
+    while (i < ac)
     {
         ft_printf("Int: %i\n", arr[i]);
         i++;
@@ -36,7 +36,33 @@ int *store_array(int ac, char const **args)
     return (arr);
 }
 
+void sort_array(int ac, int *arr)
+{
+    int i;
+    int j;
+    int temp;
+
+    i = 0;
+    j = 0;
+    temp = 0;
+    while (i < ac - 1)
+    {
+        while (j < ac - 1 - i)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+            }
+            j++;
+        }
+        j = 0;
+        i++;
+    }
+}
+
 t_list store_stack(char const **args)
 {
-    
+    int *arr;
 }
