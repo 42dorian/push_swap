@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:54 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 17:04:14 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/08 17:39:26 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ void				store_stack(t_stack *stack, int ac, char const **args);
 void				sort_stack_index(t_stack *stack, int *arr, int ac);
 int					get_stack_size(t_stack *stack);
 int					get_max_bits(t_stack *stack);
-void				pa(t_stack *stack_a, t_stack *stack_b);
-void				pb(t_stack *stack_b, t_stack *stack_a);
+void				pa(t_stack **stack_a, t_stack **stack_b);
+void				pb(t_stack **stack_b, t_stack **stack_a);
 void				ra(t_stack **stack);
+void				redix_sort(t_stack **stack_a, t_stack **stack_b);
 #endif

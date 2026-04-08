@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 16:17:51 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 17:04:56 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/08 17:39:10 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ static void	push(t_stack **src, t_stack **dst)
 	(*dst)->prev = NULL;
 }
 
-void	pa(t_stack *stack_a, t_stack *stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	push(&stack_a, &stack_b);
+	push(stack_a, stack_b);
 	ft_printf("pa\n");
 }
 
-void	pb(t_stack *stack_b, t_stack *stack_a)
+void	pb(t_stack **stack_b, t_stack **stack_a)
 {
-	push(&stack_a, &stack_b);
+	push(stack_a, stack_b);
 	ft_printf("pb\n");
 }
