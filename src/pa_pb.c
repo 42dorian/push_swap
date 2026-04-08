@@ -23,18 +23,22 @@ static void	push(t_stack **src, t_stack **dst)
 	tmp->next = *dst;
 	if (*dst)
 		(*dst)->prev = tmp;
+	tmp->prev = NULL;
 	*dst = tmp;
-	(*dst)->prev = NULL;
 }
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	push(stack_a, stack_b);
+	if (!stack_b || !*stack_b)
+		return ;
+	push(stack_b, stack_a);
 	ft_printf("pa\n");
 }
 
-void	pb(t_stack **stack_b, t_stack **stack_a)
+void	pb(t_stack **stack_a, t_stack **stack_b)
 {
+	if (!stack_a || !*stack_a)
+		return ;
 	push(stack_a, stack_b);
 	ft_printf("pb\n");
 }

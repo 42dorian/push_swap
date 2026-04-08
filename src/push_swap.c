@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:50 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 17:33:53 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/08 20:39:50 by dorianabdul      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,21 @@ void	print_stack(t_stack *stack)
 
 int	main(int ac, char const *av[])
 {
-	t_stack	stack_a;
-	t_stack	stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
-	ft_bzero(&stack_a, sizeof(t_stack));
-	ft_bzero(&stack_b, sizeof(t_stack));
-	if (!check_input(ac, av + 1))
+	stack_a = NULL;
+	stack_b = NULL;
+	if (ac < 2)
+		return (SUCCESS);
+	if (!check_input(av + 1))
 		return (FAIL);
-	store_stack(&stack_a, ac - 1, av + 1);
-	print_stack(&stack_a);
-	ft_printf("LIST size: %i\n", get_stack_size(&stack_a));
+	if (!store_stack(&stack_a, ac - 1, av + 1))
+		return (FAIL);
+	print_stack(stack_a);
 	redix_sort(&stack_a, &stack_b);
+	print_stack(stack_a);
+	free_stack(&stack_a);
+	free_stack(&stack_b);
 	return (SUCCESS);
 }

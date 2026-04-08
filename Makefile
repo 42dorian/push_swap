@@ -5,7 +5,8 @@ SOURCE = src/push_swap.c \
 			src/helpers.c \
 			src/store_and_sort.c \
 			src/redix.c \
-			src/pa_pb.c
+			src/pa_pb.c \
+			src/sorting_helpers.c
 
 HEADER = push_swap.h
 

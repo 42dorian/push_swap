@@ -30,13 +30,11 @@ int	check_digits(char const *arg)
 	return (TRUE);
 }
 
-int	check_input(int ac, char const **args)
+int	check_input(char const **args)
 {
 	int	i;
 
 	i = 0;
-	if (ac < 2)
-		return (0);
 	while (args[i])
 	{
 		if (!check_digits(args[i]))
@@ -87,4 +85,18 @@ int	get_stack_size(t_stack *stack)
 		i++;
 	}
 	return (i);
+}
+
+void	free_stack(t_stack **stack)
+{
+	t_stack	*tmp;
+
+	if (!stack)
+		return ;
+	while (*stack)
+	{
+		tmp = (*stack)->next;
+		free(*stack);
+		*stack = tmp;
+	}
 }

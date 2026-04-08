@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   store_and_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:31:43 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/07 17:37:09 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/08 20:35:49 by dorianabdul      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,32 +55,47 @@ void	sort_array(int ac, int *arr)
 	}
 }
 
-void	store_stack(t_stack *stack, int ac, char const **args)
+static int	add_node(t_stack **stack, t_stack **tail, int value)
+{
+	t_stack	*node;
+
+	node = ft_calloc(1, sizeof(t_stack));
+	if (!node)
+		return (FALSE);
+	node->value = value;
+	node->prev = *tail;
+	if (*tail)
+		(*tail)->next = node;
+	else
+		*stack = node;
+	*tail = node;
+	return (TRUE);
+}
+
+int	store_stack(t_stack **stack, int ac, char const **args)
 {
 	int		i;
 	int		*arr;
-	t_stack	*head;
+	t_stack	*tail;
 
-	i = 0;
-	head = stack;
 	arr = store_array(ac, args);
 	if (!arr)
-		return ;
+		return (FALSE);
+	if (is_sorted(arr, ac))
+		return(free(arr), FALSE);
+	i = 0;
+	tail = NULL;
 	while (i < ac)
 	{
-		stack->value = arr[i];
-		if (i + 1 < ac)
-		{
-			stack->next = ft_calloc(1, sizeof(t_stack));
-			if (!stack->next)
-				return (free(arr));
-			stack->next->prev = stack;
-			stack = stack->next;
-		}
+		if (!add_node(stack, &tail, arr[i]))
+			return (free(arr), free_stack(stack), FALSE);
 		i++;
 	}
 	sort_array(ac, arr);
-	sort_stack_index(head, arr, ac);
+	if (has_duplicates(arr, ac))
+		return(free(arr), FALSE);
+	sort_stack_index(*stack, arr, ac);
+	return (free(arr), TRUE);
 }
 
 void	sort_stack_index(t_stack *stack, int *arr, int ac)

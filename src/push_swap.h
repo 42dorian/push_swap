@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:54 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 17:39:26 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/08 20:31:25 by dorianabdul      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,19 @@ typedef struct s_stack
 }					t_stack;
 
 int					check_digits(char const *arg);
-int					check_input(int ac, char const **args);
+int					check_input(char const **args);
 int					*store_array(int ac, char const **args);
 void				sort_array(int ac, int *arr);
 long				ft_atol(const char *nptr);
-void				store_stack(t_stack *stack, int ac, char const **args);
+int					store_stack(t_stack **stack, int ac, char const **args);
 void				sort_stack_index(t_stack *stack, int *arr, int ac);
 int					get_stack_size(t_stack *stack);
 int					get_max_bits(t_stack *stack);
+void				free_stack(t_stack **stack);
 void				pa(t_stack **stack_a, t_stack **stack_b);
-void				pb(t_stack **stack_b, t_stack **stack_a);
+void				pb(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack);
 void				redix_sort(t_stack **stack_a, t_stack **stack_b);
+int has_duplicates(int *arr, int ac);
+int is_sorted(int *arr, int ac);
 #endif
