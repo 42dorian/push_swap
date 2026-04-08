@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:50 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/07 17:33:33 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/08 16:27:20 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	main(int ac, char const *av[])
 	ft_bzero(&stack_a, sizeof(t_stack));
 	ft_bzero(&stack_b, sizeof(t_stack));
 	if (!check_input(ac, av + 1))
-		return (fail);
+		return (FAIL);
 	store_stack(&stack_a, ac - 1, av + 1);
 	print_stack(&stack_a);
-	ft_printf("LIST size: %i\n", stack_size(&stack_a));
-	return (success);
+	ft_printf("LIST size: %i\n", get_stack_size(&stack_a));
+	return (SUCCESS);
 }

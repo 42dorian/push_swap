@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 14:10:34 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/07 17:35:57 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/08 15:08:50 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	check_digits(char const *arg)
 	while (arg[i])
 	{
 		if (!ft_isdigit(arg[i]))
-			return (false);
+			return (FALSE);
 		if (ft_atol(arg) > INT_MAX || ft_atol(arg) < INT_MIN)
-			return (false);
+			return (FALSE);
 		i++;
 	}
-	return (true);
+	return (TRUE);
 }
 
 int	check_input(int ac, char const **args)
@@ -40,10 +40,10 @@ int	check_input(int ac, char const **args)
 	while (args[i])
 	{
 		if (!check_digits(args[i]))
-			return (ft_printf("Error\n"), false);
+			return (ft_printf("Error\n"), FALSE);
 		i++;
 	}
-	return (true);
+	return (TRUE);
 }
 
 long	ft_atol(const char *nptr)
@@ -74,7 +74,7 @@ long	ft_atol(const char *nptr)
 	return (value * sign);
 }
 
-int	stack_size(t_stack *stack)
+int	get_stack_size(t_stack *stack)
 {
 	int	i;
 
