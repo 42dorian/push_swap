@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   store_and_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:31:43 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 20:35:49 by dorianabdul      ###   ########.fr       */
+/*   Updated: 2026/04/09 11:21:20 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int	store_stack(t_stack **stack, int ac, char const **args)
 	}
 	sort_array(ac, arr);
 	if (has_duplicates(arr, ac))
-		return(free(arr), FALSE);
+		return(free(arr), free_stack(stack), FALSE);
 	sort_stack_index(*stack, arr, ac);
 	return (free(arr), TRUE);
 }

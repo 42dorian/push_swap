@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 14:10:34 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 15:08:50 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/09 13:02:29 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ long	ft_atol(const char *nptr)
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		value = value * 10 + nptr[i] - 48;
+		if (value > INT_MAX)
+			return (value);
 		i++;
 	}
 	return (value * sign);
