@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:54 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 20:31:25 by dorianabdul      ###   ########.fr       */
+/*   Updated: 2026/04/09 17:15:15 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ void				free_stack(t_stack **stack);
 void				pa(t_stack **stack_a, t_stack **stack_b);
 void				pb(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack);
+void				sa(t_stack **stack);
+void				rra(t_stack **stack);
 void				redix_sort(t_stack **stack_a, t_stack **stack_b);
-int has_duplicates(int *arr, int ac);
-int is_sorted(int *arr, int ac);
+int					has_duplicates(int *arr, int ac);
+int					is_sorted(int *arr, int ac);
+void				small_sort(t_stack **stack_a);
 #endif

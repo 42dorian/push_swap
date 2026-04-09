@@ -6,7 +6,8 @@ SOURCE = src/push_swap.c \
 			src/store_and_sort.c \
 			src/redix.c \
 			src/pa_pb.c \
-			src/sorting_helpers.c
+			src/sorting_helpers.c \
+			src/small_sort.c
 
 HEADER = push_swap.h
 
@@ -32,7 +33,7 @@ $(LIBFT):
 $(FT_PRINTF):
 		@make -C $(FT_PRINTF_DIR)
 
-%.o: %.c push_swap.h libft/libft.h ft_printf/ft_printf.h
+%.o: %.c src/push_swap.h include/libft/libft.h include/ft_printf/ft_printf.h
 	${CC} ${CFLAGS} -c $< -o $@
 
 ${NAME}: ${LIBFT} ${FT_PRINTF} ${OBJECTS}

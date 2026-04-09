@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 14:40:52 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/08 17:38:02 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/09 14:39:55 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ void	redix_sort(t_stack **stack_a, t_stack **stack_b)
 		j = 0;
 		while (j < stack_size)
 		{
-            if ((((*stack_a)->index >> i) & 1) == 1)
-                ra(stack_a);
-            else
-                pb(stack_a, stack_b);
+			if ((((*stack_a)->index >> i) & 1) == 1)
+				ra(stack_a);
+			else
+				pb(stack_a, stack_b);
 			j++;
 		}
-        while ((*stack_b))
-            pa(stack_a, stack_b);
+		while ((*stack_b))
+			pa(stack_a, stack_b);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 14:10:34 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/09 13:02:29 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/09 14:40:11 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	check_input(char const **args)
 	while (args[i])
 	{
 		if (!check_digits(args[i]))
-			return (ft_printf("Error\n"), FALSE);
+			return (ft_putstr_fd("Error\n", 2), FALSE);
 		i++;
 	}
 	return (TRUE);
@@ -59,8 +59,6 @@ long	ft_atol(const char *nptr)
 	{
 		sign = sign * -1;
 		i++;
-		if (nptr[i] == '+')
-			return (0);
 	}
 	else if (nptr[i] == '+')
 		i++;
