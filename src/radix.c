@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   redix.c                                            :+:      :+:    :+:   */
+/*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 14:40:52 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/09 14:39:55 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/10 15:51:02 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	get_max_bits(t_stack *stack)
 	return (max_bits);
 }
 
-void	redix_sort(t_stack **stack_a, t_stack **stack_b)
+void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int	stack_size;
 	int	max_bits;

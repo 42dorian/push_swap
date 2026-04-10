@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 20:26:08 by dorianabdul       #+#    #+#             */
-/*   Updated: 2026/04/09 14:40:44 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/10 15:52:24 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	has_duplicates(int *arr, int ac)
 	while (i < ac - 1)
 	{
 		if (arr[i] == arr[i + 1])
-			return (1);
+			return (TRUE);
 		i++;
 	}
-	return (0);
+	return (FALSE);
 }
 
 int	is_sorted(int *arr, int ac)

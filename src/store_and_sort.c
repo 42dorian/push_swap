@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:31:43 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/09 15:15:08 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/10 16:09:59 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	*store_array(int ac, char const **args)
 		arr[i] = ft_atoi(args[i]);
 		i++;
 	}
+	if (has_duplicates(arr, ac))
+		return (ft_putstr_fd("Error\n", 2), free(arr), NULL);
 	return (arr);
 }
 
@@ -82,7 +84,7 @@ int	store_stack(t_stack **stack, int ac, char const **args)
 	if (!arr)
 		return (FALSE);
 	if (is_sorted(arr, ac))
-		return (free(arr), FALSE);
+		return (free(arr), 42);
 	i = 0;
 	tail = NULL;
 	while (i < ac)

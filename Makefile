@@ -4,7 +4,7 @@ SOURCE = src/push_swap.c \
 			src/moves.c \
 			src/helpers.c \
 			src/store_and_sort.c \
-			src/redix.c \
+			src/radix.c \
 			src/pa_pb.c \
 			src/sorting_helpers.c \
 			src/small_sort.c

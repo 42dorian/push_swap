@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:54 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/10 12:14:04 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/10 15:51:17 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void				pb(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack);
 void				sa(t_stack **stack);
 void				rra(t_stack **stack);
-void				redix_sort(t_stack **stack_a, t_stack **stack_b);
+void				radix_sort(t_stack **stack_a, t_stack **stack_b);
 int					has_duplicates(int *arr, int ac);
 int					is_sorted(int *arr, int ac);
 void				small_sort(t_stack **stack_a, t_stack **stack_b);
