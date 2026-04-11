@@ -44,5 +44,6 @@ To verify that your output correctly sorts the numbers, pipe it into the checker
 
 Discussed the project extensively with peers who had already completed it, which helped clarify concepts and improve the implementation.
 
-- https://www.youtube.com/watch?v=XiuSW_mEn7g  
-  This video provided a clear explanation of the radix sort algorithm and helped build a solid understanding of its logic.
+These video provided a clear explanation of the radix sort algorithm and helped build a solid understanding of its logic.
+- https://www.youtube.com/watch?v=XiuSW_mEn7g
+- https://www.youtube.com/watch?v=Y95a-8oNqps

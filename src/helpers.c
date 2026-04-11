@@ -6,7 +6,7 @@
 /*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 14:10:34 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/09 14:40:11 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/11 11:49:15 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	check_digits(char const *arg)
 	int	i;
 
 	i = 0;
-	if ((arg[i] == '-' || arg[i] == '+') && (arg[i + 1]))
-		i++;
 	if (!arg[i])
 		return (FALSE);
+	if ((arg[i] == '-' || arg[i] == '+') && (arg[i + 1]))
+		i++;
 	while (arg[i])
 	{
 		if (!ft_isdigit(arg[i]))

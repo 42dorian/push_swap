@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:50 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/11 08:28:34 by dorianabdul      ###   ########.fr       */
+/*   Updated: 2026/04/11 11:48:25 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int ac, char const *av[])
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int ret;
+	int		return_value;
 
 	stack_a = NULL;
 	stack_b = NULL;
@@ -24,10 +24,10 @@ int	main(int ac, char const *av[])
 		return (FAIL);
 	if (!check_input(av + 1))
 		return (FAIL);
-	ret = store_stack(&stack_a, ac - 1, av + 1);
-	if (ret == 0)
+	return_value = store_stack(&stack_a, ac - 1, av + 1);
+	if (return_value == 0)
 		return (FAIL);
-	if (ret == SORTED)
+	if (return_value == SORTED)
 		return (SUCCESS);
 	if (ac <= 6)
 		small_sort(&stack_a, &stack_b);

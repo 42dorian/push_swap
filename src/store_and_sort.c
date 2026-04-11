@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   store_and_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
+/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:31:43 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/11 08:27:58 by dorianabdul      ###   ########.fr       */
+/*   Updated: 2026/04/11 11:46:33 by dabdulla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
