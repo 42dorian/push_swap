@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 10:42:54 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/10 15:51:17 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/11 08:27:50 by dorianabdul      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define TRUE 1
 # define FAIL 1
 # define SUCCESS 0
-
+# define SORTED 42
 typedef struct s_stack
 {
 	int				value;

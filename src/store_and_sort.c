@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   store_and_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabdulla <dabdulla@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: dorianabdullahi <dorianabdullahi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 15:31:43 by dabdulla          #+#    #+#             */
-/*   Updated: 2026/04/10 16:09:59 by dabdulla         ###   ########.fr       */
+/*   Updated: 2026/04/11 08:27:58 by dorianabdul      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	store_stack(t_stack **stack, int ac, char const **args)
 	if (!arr)
 		return (FALSE);
 	if (is_sorted(arr, ac))
-		return (free(arr), 42);
+		return (free(arr), SORTED);
 	i = 0;
 	tail = NULL;
 	while (i < ac)

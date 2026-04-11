@@ -19,6 +19,8 @@ int	check_digits(char const *arg)
 	i = 0;
 	if ((arg[i] == '-' || arg[i] == '+') && (arg[i + 1]))
 		i++;
+	if (!arg[i])
+		return (FALSE);
 	while (arg[i])
 	{
 		if (!ft_isdigit(arg[i]))
@@ -65,8 +67,8 @@ long	ft_atol(const char *nptr)
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		value = value * 10 + nptr[i] - 48;
-		if (value > INT_MAX)
-			return (value);
+		if (value * sign > INT_MAX || value * sign < INT_MIN)
+			return (value * sign);
 		i++;
 	}
 	return (value * sign);
