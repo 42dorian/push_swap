@@ -1,8 +1,0 @@
-*.o
-*.a
-*.d
-a.out
-.DS_Store
-.vscode/
-checker_linux
-push_swap
