@@ -1,4 +1,4 @@
-*This project was created as part of the 42 curriculum by **dabdulla**.*
+*This project was created as part of the 42 curriculum by dabdulla.*
 
 ## Description
 
@@ -37,8 +37,9 @@ For bash:
 ### Check correctness
 
 To verify that your output correctly sorts the numbers, pipe it into the checker:
-
+```
 ./push_swap $ARG | ./checker_linux $ARG
+```
 
 ## Resources
 
